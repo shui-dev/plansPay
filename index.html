@@ -4,26 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./dist/output.css" rel="stylesheet">
-    <link rel="stylesheet" type="" href="./src/input.css"">
+    <link rel="stylesheet" type="" href="./src/input.css">
+    <link rel="icon" type="image/x-icon" href="./images/favicon-32x32.png">
+    <title>Desafio | Planos</title>
   </head>
   <body>
-   <main class="flex justify-center">
-      <div class="flex flex-col text-center gap-3">
-        <p>Precos</p>
-        <div class="flex gap-7">
+   <main class="w-screen h-screen flex justify-center items-start gap-7 p-9 max-sm:gap-20">
+      <div class="flex flex-col text-center gap-7">
+        <p class="text-6xl text-zinc-700">Preços</p>
+        <div class="flex gap-7 justify-center text-zinc-600 text-xl">
           <p>Anual</p>
-          <div>
-            O
+          <div class="px-7 relative rounded-2xl bg-gradient-to-br from-blue-300 to-blue-600">
+            <!-- <button class=""> -->
+              <div class="text-white transition-all w-5 h-5 rounded-full bg-white cursor-pointer toggle absolute top-2/4 -translate-y-2/4 month"></div>
+            <!-- </button> -->
           </div>
-          <p>Mes</p>
+          <p>Mês</p>
       </div> 
-      <div class="flex justify-center items-center">
-        <div class="flex flex-col gap-8 w-80 p-8 rounded-l-xl shadow-2xl">
+      <div class="flex justify-center items-center p-4 max-sm:flex-col max-sm:gap-7">
+        <div class="flex flex-col gap-8 w-80 p-8 rounded-l-xl box-shadow max-sm:rounded-xl">
           <div class="flex flex-col gap-4">
-            <p class="text-sm text-zinc-500">Basico</p>
+            <p class="text-sm text-zinc-500">Básico</p>
             <div class="flex gap-1 text-zinc-800 items-center justify-center">
              <h1 class="text-3xl">R$</h1>
-             <h1 class="text-6xl">19,99</h1>
+             <h1 id="basicPrice" class="text-6xl">19,99</h1>
             </div>
           </div>
           <div class="border-b-2 border-zinc-300 text-zinc-600 text-sm">
@@ -32,44 +36,47 @@
             <p class="border-t-2 border-zinc-300 p-4">Enviar 3GB</p>
           </div>
           <div class="w-full text-blue-800">
-            <button class="w-full tracking-widest uppercase border-2 border-blue-800 rounded-lg text-sm p-2 hover:bg-blue-800 ease-in duration-150 hover:text-white" type="submit">VER MAIS</button>
+            <button class="w-full tracking-widest uppercase text-white bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg text-sm p-3 hover:scale-105 ease-in duration-150" type="submit">VER MAIS</button>
           </div>
         </div>
-        <div class="flex flex-col gap-8 w-80 p-8 rounded-lg z-10 bg-blue-500">
+        <div class="flex flex-col gap-14 w-80 p-8 rounded-xl z-10 bg-gradient-to-br from-blue-300 to-blue-600">
           <div class="flex flex-col gap-4">
-            <p class="text-sm text-zinc-500">Basico</p>
+            <p class="text-sm text-zinc-100">Profissional</p>
             <div class="flex gap-1 text-white items-center justify-center">
              <h1 class="text-3xl">R$</h1>
-             <h1 class="text-6xl">19,99</h1>
+             <h1 id="proPrice" class="text-6xl">24,99</h1>
             </div>
           </div>
-          <div class="border-b-2 border-zinc-300 text-zinc-600 text-sm">
-            <p class="border-t-2 border-zinc-300 p-4">500 GB Armazenamento</p>
-            <p class="border-t-2 border-zinc-300 p-4">2 Usuarios</p>
-            <p class="border-t-2 border-zinc-300 p-4">Enviar 3GB</p>
+          <div class="border-b-2 border-zinc-100/35 text-zinc-100 text-sm">
+            <p class="border-t-2 border-zinc-100/35 p-4">1TB Armazenamento</p>
+            <p class="border-t-2 border-zinc-100/35 p-4">5 Usuarios</p>
+            <p class="border-t-2 border-zinc-100/35 p-4">Enviar 10GB</p>
           </div>
-          <div class="w-full text-blue-800">
-            <button class="w-full tracking-widest uppercase border-2 border-blue-800 rounded-lg text-sm p-2 hover:bg-blue-800 ease-in duration-150 hover:text-white" type="submit">VER MAIS</button>
+          <div class="w-full text-blue-500">
+            <button class="w-full tracking-widest bg-white uppercase rounded-lg text-sm p-3 hover:bg-blue-200 ease-in duration-150 hover:text-blue-600" type="submit">VER MAIS</button>
           </div>
         </div>
-        <div class="flex flex-col gap-8 w-80 p-8 rounded-r-xl shadow-2xl">
+        <div class="flex flex-col gap-8 w-80 p-8 rounded-r-xl box-shadow max-sm:rounded-xl">
           <div class="flex flex-col gap-4">
-            <p class="text-sm text-zinc-500">Basico</p>
+            <p class="text-sm text-zinc-500">Master</p>
             <div class="flex gap-1 text-zinc-800 items-center justify-center">
              <h1 class="text-3xl">R$</h1>
-             <h1 class="text-6xl">19,99</h1>
+             <h1 id="masterPrice" class="text-6xl">39,99</h1>
             </div>
           </div>
           <div class="border-b-2 border-zinc-300 text-zinc-600 text-sm">
-            <p class="border-t-2 border-zinc-300 p-4">500 GB Armazenamento</p>
-            <p class="border-t-2 border-zinc-300 p-4">2 Usuarios</p>
-            <p class="border-t-2 border-zinc-300 p-4">Enviar 3GB</p>
+            <p class="border-t-2 border-zinc-300 p-4">2TB Armazenamento</p>
+            <p class="border-t-2 border-zinc-300 p-4">10 Usuarios</p>
+            <p class="border-t-2 border-zinc-300 p-4">Enviar 20GB</p>
           </div>
           <div class="w-full text-blue-800">
-            <button class="w-full tracking-widest uppercase border-2 border-blue-800 rounded-lg text-sm p-2 hover:bg-blue-800 ease-in duration-150 hover:text-white" type="submit">VER MAIS</button>
+            <button class="w-full tracking-widest uppercase text-white bg-gradient-to-r from-cyan-500 to-purple-500 rounded-lg text-sm p-3 hover:scale-105 ease-in duration-150" type="submit">VER MAIS</button>
           </div>
         </div>
       </div>
-   </main>  
+   </main>
+
+   <script src="./js/main.js"></script>
+   <script src="https://kit.fontawesome.com/8de8167dec.js" crossorigin="anonymous"></script>  
   </body>
 </html>

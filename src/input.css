@@ -25,3 +25,30 @@
   border-top: 1px;
   border-style: solid;
 }
+/* 
+.month {
+
+  transition: all 1s;
+}
+
+.annualy {
+  left: 4px;
+  transition: all 1s;
+} */
+.toggle {
+  transition: all 1s;
+}
+
+.toggle.month {
+  right: 4px;
+  /* transition: all 1s; */
+}
+
+.toggle.annualy {
+  left: 4px;
+  /* transition: all 1s; */
+}
+
+.box-shadow {
+  box-shadow: 0px 0px 7px 0px #00000044;
+}
